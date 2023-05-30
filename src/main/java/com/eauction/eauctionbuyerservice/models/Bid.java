@@ -1,36 +1,39 @@
-package com.eauction.models;
+package com.eauction.eauctionbuyerservice.models;
+
 
 import org.springframework.data.annotation.TypeAlias;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
-@Document(collection = "seller")
-@TypeAlias("seller")
-public class Seller {
+@Document(collection = "Bid")
+@TypeAlias("bid")
+public class Bid {
 
     @Id
+    @NotNull(message = "id cannot be empty")
     private String id;
-    @NotNull
-    @Size(min = 5, max = 30)
     private String firstName;
-    @NotNull
-    @Size(min = 5, max = 30)
     private String lastName;
     private String address;
     private String city;
     private String state;
     private String pin;
-    @NotNull
-    @Size(min = 10, max = 10)
     private String phone;
-    @Email
+    @Email(message = "Email is not valid", regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
+    @NotEmpty(message = "Email cannot be empty")
     private String email;
+    private String productId;
+    private double bidAmount;
 
-    public Seller(String id, String firstName, String lastName, String address, String city, String state, String pin, String phone, String email) {
+    public Bid() {
+    }
+
+    public Bid(String id, String firstName, String lastName, String address, String city, String state,
+               String pin, String phone, String email, String productId, double bidAmount) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -40,6 +43,8 @@ public class Seller {
         this.pin = pin;
         this.phone = phone;
         this.email = email;
+        this.productId = productId;
+        this.bidAmount = bidAmount;
     }
 
     public String getId() {
@@ -112,5 +117,21 @@ public class Seller {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public double getBidAmount() {
+        return bidAmount;
+    }
+
+    public void setBidAmount(double bidAmount) {
+        this.bidAmount = bidAmount;
     }
 }

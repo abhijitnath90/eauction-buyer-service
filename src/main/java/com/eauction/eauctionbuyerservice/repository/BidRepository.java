@@ -1,6 +1,6 @@
-package com.eauction.repository;
+package com.eauction.eauctionbuyerservice.repository;
 
-import com.eauction.models.Bid;
+import com.eauction.eauctionbuyerservice.models.Bid;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

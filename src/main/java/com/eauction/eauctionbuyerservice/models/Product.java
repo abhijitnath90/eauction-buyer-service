@@ -1,4 +1,4 @@
-package com.eauction.models;
+package com.eauction.eauctionbuyerservice.models;
 
 import org.springframework.data.annotation.TypeAlias;
 import org.springframework.data.mongodb.core.mapping.DBRef;

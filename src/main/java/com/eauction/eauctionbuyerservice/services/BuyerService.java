@@ -1,9 +1,9 @@
-package com.eauction.services;
+package com.eauction.eauctionbuyerservice.services;
 
-import com.eauction.models.Bid;
-import com.eauction.models.Product;
-import com.eauction.repository.BidRepository;
-import com.eauction.repository.ProductRepository;
+import com.eauction.eauctionbuyerservice.models.Bid;
+import com.eauction.eauctionbuyerservice.models.Product;
+import com.eauction.eauctionbuyerservice.repository.BidRepository;
+import com.eauction.eauctionbuyerservice.repository.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

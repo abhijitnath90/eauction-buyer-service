@@ -1,4 +1,4 @@
-package com.eauction.models;
+package com.eauction.eauctionbuyerservice.models;
 
 import java.util.Date;
 

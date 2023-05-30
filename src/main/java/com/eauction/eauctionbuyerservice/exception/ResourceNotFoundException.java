@@ -1,4 +1,4 @@
-package com.eauction.exception;
+package com.eauction.eauctionbuyerservice.exception;
 
 public class ResourceNotFoundException extends Exception {
 
