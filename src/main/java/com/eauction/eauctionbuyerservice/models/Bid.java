@@ -9,7 +9,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-@Document(collection = "Bid")
+@Document(collection = "bid")
 @TypeAlias("bid")
 public class Bid {
 
