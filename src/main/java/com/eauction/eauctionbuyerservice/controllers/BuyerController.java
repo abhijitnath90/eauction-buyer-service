@@ -46,6 +46,7 @@ public class BuyerController {
     }
 
     @PutMapping(value = "/update-bid/{productId}/{buyerEmailId}/{newBidAmount}")
+    @CrossOrigin
     public ResponseEntity<?> updateBid(@PathVariable(value = "productId") String productId,
                                        @PathVariable(value = "buyerEmailId") String buyerEmailId,
                                        @PathVariable(value = "newBidAmount") double newBidAmount) {
